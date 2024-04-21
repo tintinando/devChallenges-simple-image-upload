@@ -1,0 +1,22 @@
+{
+  "asset_id": "2f438d2f2269e3f1c5ec609705ea09a6",
+  "public_id": "devChallenges-simple/receita-de-alfajor-argentino-2_mounc1",
+  "version": 1713740070,
+  "version_id": "dd2816734a04695faef1398d6351d20d",
+  "signature": "ae25f3e761d51d15f5d5a34a43f7e36b559b7963",
+  "width": 2000,
+  "height": 1335,
+  "format": "jpg",
+  "resource_type": "image",
+  "created_at": "2024-04-21T22:54:30Z",
+  "tags": [],
+  "bytes": 400453,
+  "type": "upload",
+  "etag": "402aaca362dfacc61c714c37050761b7",
+  "placeholder": false,
+  "url": "http://res.cloudinary.com/dj70oirl5/image/upload/v1713740070/devChallenges-simple/receita-de-alfajor-argentino-2_mounc1.jpg",
+  "secure_url": "https://res.cloudinary.com/dj70oirl5/image/upload/v1713740070/devChallenges-simple/receita-de-alfajor-argentino-2_mounc1.jpg",
+  "folder": "devChallenges-simple",
+  "existing": false,
+  "original_filename": "receita-de-alfajor-argentino-2"
+}

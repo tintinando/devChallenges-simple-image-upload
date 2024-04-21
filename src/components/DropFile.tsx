@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react'
 import ExitIcon from '../icons/Exit'
 import { API_URL } from '../constants'
+import type { APIResponse } from '../types'
 
 const UploadingFile: FC = () => {
   return (
@@ -14,10 +15,10 @@ const UploadingFile: FC = () => {
 }
 
 interface Props {
-  setUrlImage?: React.Dispatch<React.SetStateAction<string>>
+  setUrlImage: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const DropFile: FC<Props> = ({ }) => {
+export const DropFile: FC<Props> = ({ setUrlImage }) => {
   const [dragOver, setDragOver] = useState(false)
   const [fileIsBig, setFileIsBig] = useState(false)
   const [uploading, setUploading] = useState(false)
@@ -46,9 +47,9 @@ export const DropFile: FC<Props> = ({ }) => {
         method: 'POST',
         body: data
       })
-      const json = await response.json()
+      const json: APIResponse = await response.json()
       setUploading(false)
-      console.log(json)
+      setUrlImage(json.url)
 
     } catch (e) {
       setUploading(false)
