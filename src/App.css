@@ -1,0 +1,8 @@
+@keyframes bounce {
+  0% { left: -56px; }
+  100% { left: 100%; }
+}
+
+.animated-bar {
+  animation: bounce 1.5s infinite;
+}
