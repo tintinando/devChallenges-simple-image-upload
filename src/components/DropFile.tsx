@@ -14,10 +14,10 @@ const UploadingFile: FC = () => {
 }
 
 interface Props {
-  setUrlImage: React.Dispatch<React.SetStateAction<string>>
+  setUrlImage?: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const DropFile: FC<Props> = ({ setUrlImage }) => {
+export const DropFile: FC<Props> = ({ }) => {
   const [dragOver, setDragOver] = useState(false)
   const [fileIsBig, setFileIsBig] = useState(false)
   const [uploading, setUploading] = useState(false)
