@@ -52,8 +52,7 @@ export const DropFile: FC<Props> = ({ setUrlImage }) => {
       })
       const json: APIResponse = await response.json()
       setUploading(false)
-      console.log(json.url)
-      setUrlImage(json.url)
+      setUrlImage(json.secure_url)
       navigate('/success')
 
     } catch (e) {
