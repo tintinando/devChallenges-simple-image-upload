@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Success } from './components/Success'
 
 export const App: FC = () => {
-  const [urlImage, setUrlImage] = useState('')
+  const [urlImage, setUrlImage] = useState<string>('')
 
   return (
     <div className='flex flex-col h-screen bg-primaryLight dark:bg-primaryDark'>

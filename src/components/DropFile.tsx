@@ -2,6 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react'
 import ExitIcon from '../icons/Exit'
 import { API_URL } from '../constants'
 import type { APIResponse } from '../types'
+import { useNavigate } from 'react-router-dom'
 
 const UploadingFile: FC = () => {
   return (
@@ -23,6 +24,8 @@ export const DropFile: FC<Props> = ({ setUrlImage }) => {
   const [fileIsBig, setFileIsBig] = useState(false)
   const [uploading, setUploading] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (!fileIsBig) return
@@ -49,7 +52,9 @@ export const DropFile: FC<Props> = ({ setUrlImage }) => {
       })
       const json: APIResponse = await response.json()
       setUploading(false)
+      console.log(json.url)
       setUrlImage(json.url)
+      navigate('/success')
 
     } catch (e) {
       setUploading(false)
